@@ -9,8 +9,10 @@ package com.banking.demo.model;
  */
 public class Account {
 	
+	// for simplicity kept account number int. 
+	// In real world it will be alphanumeric hence string.
+	private int accountNumber;
 	private String userName;
-	private String accountNumber;
 	private double balance;
 	public String getUserName() {
 		return userName;
@@ -18,10 +20,10 @@ public class Account {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getAccountNumber() {
+	public int getAccountNumber() {
 		return accountNumber;
 	}
-	public void setAccountNumber(String accountNumber) {
+	public void setAccountNumber(int accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 	public double getBalance() {

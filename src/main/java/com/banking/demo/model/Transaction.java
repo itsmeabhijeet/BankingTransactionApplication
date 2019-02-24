@@ -6,27 +6,29 @@ import java.io.Serializable;
  * @author Abhijeet Gupta
  *
  */
-public class Transaction implements Serializable{
+public class Transaction implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	private Account fromAccount;
-	private Account toAccount;
+
+	private int fromAccountNumber;
+	private int toAccountNumber;
 	private double amount;
-	public Account getFromAccount() {
-		return fromAccount;
+	
+	
+	public int getFromAccountNumber() {
+		return fromAccountNumber;
 	}
-	public void setFromAccount(Account fromAccount) {
-		this.fromAccount = fromAccount;
+	public void setFromAccountNumber(int fromAccountNumber) {
+		this.fromAccountNumber = fromAccountNumber;
 	}
-	public Account getToAccount() {
-		return toAccount;
+	public int getToAccountNumber() {
+		return toAccountNumber;
 	}
-	public void setToAccount(Account toAccount) {
-		this.toAccount = toAccount;
+	public void setToAccountNumber(int toAccountNumber) {
+		this.toAccountNumber = toAccountNumber;
 	}
 	public double getAmount() {
 		return amount;
@@ -34,10 +36,5 @@ public class Transaction implements Serializable{
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	
-	
-
 }
