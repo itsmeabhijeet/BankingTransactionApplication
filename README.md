@@ -6,14 +6,18 @@ Application Details below :
 The application is developed using Spring Boot and exposes two Api for the below two purpose :
   1.Sending money between two predefined accounts with a positive starting balance :
       Request :
+      
       HTTP POST API: /transaction
+      
       Body :    {
                     "fromAccountNumber": 1,
                     "toAccountNumber": 2,
                     "amount":1000
                 }
+                
       Response: 
         Success > Code : 200, message: Transaction Success
+        
         Error > Code: 400, message: Transaction Failed
         
                 
