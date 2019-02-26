@@ -10,21 +10,21 @@ package com.banking.demo.model;
 public class Account {
 	
 	// for simplicity kept account number int. 
-	// In real world it will be alphanumeric hence string.
-	private int accountNumber;
-	private String userName;
+	// In real world it will be alphanumeric that is string.
+	private int accountID;
+	private String name;;
 	private double balance;
-	public String getUserName() {
-		return userName;
+	public int getAccountID() {
+		return accountID;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setAccountID(int accountID) {
+		this.accountID = accountID;
 	}
-	public int getAccountNumber() {
-		return accountNumber;
+	public String getName() {
+		return name;
 	}
-	public void setAccountNumber(int accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public double getBalance() {
 		return balance;

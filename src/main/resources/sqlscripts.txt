@@ -1,0 +1,36 @@
+create database bankingapplication;
+
+use bankingapplication;
+
+CREATE TABLE account (
+    accountId int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+	balance numeric,
+    PRIMARY KEY (accountId)
+);
+
+insert into account (name,balance) values ('Max',10000);
+insert into account (name,balance) values ('Dean',5000);
+
+
+CREATE TABLE transactiontype (
+    ID int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+// Insert values
+INSERT INTO transactiontype (name) VALUES ('WITHDRAW');
+INSERT INTO transactiontype (name) VALUES ('DEPOSIT');
+
+create table transactionDetail (
+ ID int NOT NULL AUTO_INCREMENT,
+ accountID int,
+ transactiontypeID int,
+ currentdate date,
+ amount numeric,
+ FOREIGN KEY (accountID) REFERENCES account(accountID),
+ FOREIGN KEY (transactiontypeID) REFERENCES transactiontype(ID),
+ PRIMARY KEY (ID)
+);
+

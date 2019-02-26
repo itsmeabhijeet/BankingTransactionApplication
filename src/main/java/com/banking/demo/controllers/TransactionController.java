@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.banking.demo.model.Transaction;
 import com.banking.demo.service.IdataBaseService;
-import com.banking.demo.service.DataBaseServiceImpl;
 
 /**
  * @author Abhijeet Gupta
@@ -32,7 +31,7 @@ public class TransactionController {
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	@RequestMapping("/transactions")
+	@RequestMapping("/transaction")
 	public ResponseEntity<String> doTransaction(@RequestBody Transaction transaction) {
 		ResponseEntity<String> responseEntity = null;
 		boolean res = serviceImpl.transfer(transaction.getFromAccountNumber(), transaction.getToAccountNumber(),
