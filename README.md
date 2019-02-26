@@ -51,9 +51,11 @@ The application is developed using Spring Boot and exposes two Api for the below
   --------------------------------------------------------------------------------------------------------------------
   Ways to execute the project.
   
+  
   1. Executing the project manually.
    > Download and extract the project.
    > Import it as a gradle project in your development tool like eclipse or IntelliJ.
+   > Use the SQL scripts attached inside the resource folder and execute it on mysql client.
    > Install spring boot plugin in the working tool like in eclipse one can download from eclipse market place.
    > execute the project as spring boot project.
    > open PostMan as the tool to test REST API.
@@ -61,6 +63,7 @@ The application is developed using Spring Boot and exposes two Api for the below
    2. Executing the project using gradle.
     > Download and extract the project.
     > Install gradle 4.2 higher version in your system.
+    > Use the SQL scripts attached inside the resource folder and execute it on mysql client.
     > Build the project using gralde and use the jar to run the project.
     > use this command to run the project $ java -jar target/myapplication.jar
     > Now use postman to test the application.
