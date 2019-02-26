@@ -12,9 +12,9 @@ import com.banking.demo.model.TransactionDetail;
  *
  */
 public interface IdataBaseService {
-	
-	public boolean transfer(int fromAccontNumber, int toAccountNumber,double amount);
-	
+
+	public boolean transfer(int fromAccontNumber, int toAccountNumber, double amount);
+
 	public List<TransactionDetail> getListOfTransactions(int accountNumber);
 
 }

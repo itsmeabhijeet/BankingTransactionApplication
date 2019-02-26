@@ -6,9 +6,7 @@ package com.banking.demo.service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.sql.DataSource;
 import javax.transaction.Transactional;
@@ -50,7 +48,7 @@ public class DataBaseServiceImpl implements IdataBaseService {
 	private final static String SQL_INSERT_ACCOUNT_TRANSACTION_DETAIL = "insert into transactionDetail"
 			+ " (accountID,transactiontypeID,currentdate,amount) values(?,?,?,?);";
 
-	private final static String SQL_FETCH_ALL_TRANSACTION = "select accountId,transactionTypeID,currentDate,amount"
+	private final static String SQL_FETCH_ALL_TRANSACTION = "select id,accountId,transactionTypeID,currentDate,amount"
 			+ " from transactiondetail where accountid = ?";
 
 	@Bean
@@ -121,10 +119,11 @@ public class DataBaseServiceImpl implements IdataBaseService {
 				new Object[] { accountNumber }, new RowMapper<TransactionDetail>() {
 					public TransactionDetail mapRow(ResultSet rs, int rowNum) throws SQLException {
 						TransactionDetail td = new TransactionDetail();
-						td.setAccountID(rs.getInt(1));
-						td.setTransactionTypeId(rs.getInt(2));
-						td.setCurrentDate(rs.getString(3));
-						td.setAmount(rs.getDouble(4));
+						td.setTransactionID(rs.getInt(1));
+						td.setAccountID(rs.getInt(2));
+						td.setTransactionTypeId(rs.getInt(3));
+						td.setCurrentDate(rs.getString(4));
+						td.setAmount(rs.getDouble(5));
 						return td;
 					}
 				});
