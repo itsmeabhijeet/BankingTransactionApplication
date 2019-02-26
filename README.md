@@ -23,9 +23,12 @@ The application is developed using Spring Boot and exposes two Api for the below
                 
   2.Requesting account balance and list of transactions : 
   Request:
+  
    HTTP GET API : /transactionDetails?accountNumber=1
+   
    Response : 
           [
+          
             {
               "transactionID": 1,
               "accountID": 1,
@@ -33,6 +36,7 @@ The application is developed using Spring Boot and exposes two Api for the below
               "currentDate": "2019-02-24",
               "amount": 2000
             },
+            
             {
                 "transactionID": 2,
                 "accountID": 1,
@@ -40,6 +44,7 @@ The application is developed using Spring Boot and exposes two Api for the below
                 "currentDate": "2019-02-26",
                 "amount": 1000
             }
+            
          ]
          
   
